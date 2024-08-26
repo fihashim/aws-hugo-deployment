@@ -1,0 +1,4 @@
+baseURL = 'http://hugo-bucket83.s3-website-eu-west-1.amazonaws.com/'
+languageCode = 'en-us'
+title = 'Hugo AWS Continuous Delivery'
+theme = "ananke"
