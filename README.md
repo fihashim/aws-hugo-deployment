@@ -122,7 +122,7 @@ This repo showcases how to build a Hugo Static Website that is continuously depl
     
     c. Select an existing service role (Note: Create a new role under IAM using same project-name-role > Add Admininistrator Access & CodeBuildBasePolicy-..-..-)
     
-    d. Tick `Use `Buildspec.yml file` and specify file name from your Github repo and create build project.
+    d. Tick `Use Buildspec.yml file` and specify file name from your Github repo and create build project.
 
 25. To test if CD on AWS Codebuild works, make changes in your post in Github repo and push the changes to your repo and check status of your build projects on AWS Codebuild console.
 
