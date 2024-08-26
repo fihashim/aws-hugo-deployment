@@ -67,7 +67,7 @@ This repo showcases how to build a Hugo Static Website that is continuously depl
 
 10. Then type `echo 'theme = "theme_name"' >> hugo.toml file
 
-11. Create a post for your hugo website using `hugo new posts/my-first-post.md`
+11. Create a post for your hugo website using `hugo new posts/my-first-post.md` and git push changes to your Github repo. 
 
 ## Run Hugo Website Locally
 12. Go to AWS EC2 management console, search for the security group name of your EC2-instance.
@@ -115,11 +115,15 @@ This repo showcases how to build a Hugo Static Website that is continuously depl
 
 ## Setting Up AWS Codebuild For Continuous Deployment
 24. Go to AWS Codebuild on your AWS management console and create a new project.
+    
     a. Link the Github repository that has all the Hugo files as your source to the project.
-    b. Tick "Use Git submodules" and "Rebuild everytime a code change is pushed to the repository" under Primary source webhook events
-    c. Select an existing service role (Note: Create a new role under IAM using same project-name-role > Add Admininistrator Access & CodeBuildBasePolicy-aws-hugo-deployment2-eu-west-1)
-    d. Tick "Use Buildspec.yml file" and specify file name from your Github repo and create build project.
+    
+    b. Tick `Use Git submodules` and `Rebuild everytime a code change is pushed to the repository` under Primary source webhook events
+    
+    c. Select an existing service role (Note: Create a new role under IAM using same project-name-role > Add Admininistrator Access & CodeBuildBasePolicy-..-..-)
+    
+    d. Tick `Use `Buildspec.yml file` and specify file name from your Github repo and create build project.
 
-26. To test if CD on AWS Codebuild works, make changes in your post in Github repo and push the changes to your repo and check status of your build projects on AWS Codebuild console.
+25. To test if CD on AWS Codebuild works, make changes in your post in Github repo and push the changes to your repo and check status of your build projects on AWS Codebuild console.
 
 For an in-depth tutorial (Some steps in this video may be out of date), go to [Static Hugo Website Deployment Tutorial](https://www.youtube.com/watch?v=I-HTdojGdHs)
