@@ -1,5 +1,9 @@
 # Continuous Delivery of A Static Hugo Website on AWS
-This repo showcases how to build a Hugo Static Website that is continuously deployed via VScode. Since AWS Cloud9 has been deprecated, it is possible to launch an AWS EC2 instance in the console and using remote SSH to connect to the instance via VScode. 
+This repository is a guide on how to set up a fully automated deployment pipeline for a Hugo website, from development in VSCode to live deployment on AWS S3, with continuous integration and deployment managed by AWS CodeBuild.
+
+In this repository, I demonstrate how to launch and configure an AWS EC2 instance, install and configure Hugo for static site generation, and set up an S3 bucket for hosting. Additionally, I detail the process of automating deployments using AWS CodeBuild, ensuring that any changes pushed to the GitHub repository are automatically reflected on the live website.
+
+This repository serves as a comprehensive example of how to leverage cloud infrastructure to create a robust, scalable, and automated web deployment system, making it an ideal showcase of my capabilities in continuous delivery and cloud-based DevOps practices.
 
 ## Setting Up EC2 instance on VScode
 1. Ensure Remote SSH extension is installed in VScode.
