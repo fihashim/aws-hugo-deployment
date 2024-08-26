@@ -91,7 +91,7 @@ To do this, follow the steps below:
 
 20. Set up your bucket policy by going to `Permissions` and editting your bucket policy and add the following new statement
 
-   ```{
+   ```plaintext{
 	"Version": "2012-10-17",
 	"Statement": [
 		{
@@ -107,7 +107,7 @@ To do this, follow the steps below:
 		}
 	]
 	}
-
+```
 
 21. Copy your bucket website endpoint under the `Properties` tab and Go to your `hugo.toml` file in VScode and paste the website endpoint as your baseURL.
 
@@ -116,5 +116,12 @@ To do this, follow the steps below:
 23. To test that it works, go to Properties and click on the s3 bucket website link under the `Static Web Hosting` section.
 
 ## Setting Up AWS Codebuild For Continuous Deployment
-24. Go to AWS Codebuild on your AWS management console and create a new project. Link the Github repository that has all the Hugo files to the project. Tick "Use Git submodules" and "Rebuild everytime a code change is pushed to the repository" 
-[Static Hugo Website Deployment](https://www.youtube.com/watch?v=I-HTdojGdHs)
+24. Go to AWS Codebuild on your AWS management console and create a new project.
+    a. Link the Github repository that has all the Hugo files as your source to the project.
+    b. Tick "Use Git submodules" and "Rebuild everytime a code change is pushed to the repository" under Primary source webhook events
+    c. Select an existing service role (Note: Create a new role under IAM using same project-name-role > Add Admininistrator Access & CodeBuildBasePolicy-aws-hugo-deployment2-eu-west-1)
+    d. Tick "Use Buildspec.yml file" and specify file name from your Github repo and create build project.
+
+26. To test if CD on AWS Codebuild works, make changes in your post in Github repo and push the changes to your repo and check status of your build projects on AWS Codebuild console.
+
+For an in-depth tutorial (Some steps in this video may be out of date), go to [Static Hugo Website Deployment](https://www.youtube.com/watch?v=I-HTdojGdHs)
