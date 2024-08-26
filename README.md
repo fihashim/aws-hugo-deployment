@@ -1,8 +1,6 @@
 # Continuous Delivery of A Static Hugo Website on AWS
 This repo showcases how to build a Hugo Static Website that is continuously deployed via VScode. Since AWS Cloud9 has been deprecated, it is possible to launch an AWS EC2 instance in the console and using remote SSH to connect to the instance via VScode. 
 
-To do this, follow the steps below:
-
 ## Setting Up EC2 instance on VScode
 1. Ensure Remote SSH extension is installed in VScode.
 
